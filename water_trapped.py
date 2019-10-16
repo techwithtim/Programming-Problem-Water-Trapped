@@ -9,14 +9,14 @@ def water(pipes):
 	"""
 
 	# Will display all test cases visualization
-	screen = Visual(pipes, 1600, 1000)
+	screen = Visual(pipes, 500, 500)
 	screen.show()
-	# Comment out lines above to stop visulation 
+	# Comment out lines above to stop visulation
 
 	# If length is less than 3 than nothing can be contained
 	if len(pipes) < 3:
-		return 0 
-	
+		return 0
+
 	area = 0
 	ind = 0
 
@@ -35,7 +35,7 @@ def water(pipes):
 			num_pipes = pipe_ind-ind-1  # how many pipes we are finding area for
 			area += (p * num_pipes) - sum(pipes[ind+1:pipe_ind])  # add area of all pipes inbetween those two pipes
 			ind = pipe_ind  # change last tallest pipe to be the pipe we found
-		
+
 	return area  # return answer
 
 # Run the test_cases.py file to test your answer, make sure you have your function named water
