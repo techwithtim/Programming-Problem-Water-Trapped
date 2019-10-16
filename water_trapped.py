@@ -9,7 +9,7 @@ def water(pipes):
 	"""
 
 	# Will display all test cases visualization
-	screen = Visual(pipes, 500, 500)
+	screen = Visual(pipes, 1000, 1000)
 	screen.show()
 	# Comment out lines above to stop visulation
 
