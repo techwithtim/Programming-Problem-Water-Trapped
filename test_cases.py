@@ -1,18 +1,18 @@
 import unittest
 import time
-from WaterContained import water
+from water_trapped import water
 from Solution import solution
 import random
 
-class TestWaterContained(unittest.TestCase):
+class TestWaterTrapped(unittest.TestCase):
 	"""
 	Test cases for the water pipe problem
 	"""
-	
+
 	def test_one(self):
 		case = [4,2,4]
 		ans = water(case)
-		self.assertEqual(ans, 2, f"{ans} Should be 2")
+    	self.assertEqual(ans, 2, f"{ans} Should be 2")
 
 	def test_two(self):
 		case = [5,2,5,5]
@@ -36,7 +36,7 @@ class TestWaterContained(unittest.TestCase):
 
 	def test_six(self):
 		case = [2,2,2,2,2]
-		ans = water(case) 
+		ans = water(case)
 		self.assertEqual(ans, 0, f"{ans} Should be 0")
 
 	def test_random(self):
@@ -48,7 +48,7 @@ class TestWaterContained(unittest.TestCase):
 			sol = solution(case)
 			ans = water(case)
 			self.assertEqual(ans, sol, f"{ans} Should be {sol}")
-			
+
 
 if __name__ == "__main__":
 	unittest.main()
